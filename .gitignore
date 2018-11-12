@@ -1,6 +1,7 @@
-
 \.classpath
-
+\.pom
 \.project
-
-*.prefs
+\traget\*
+\*.jar
+\*.prefs
+\.settings\*
