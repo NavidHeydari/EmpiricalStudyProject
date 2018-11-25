@@ -2,18 +2,11 @@ package edu.uw.empiricalstudy.common;
 
 import java.io.File;
 import java.io.IOException;
-import java.net.URI;
-import java.nio.file.FileVisitOption;
 import java.nio.file.Files;
-import java.nio.file.OpenOption;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
-
-import javax.management.openmbean.OpenMBeanOperationInfoSupport;
 
 public class Util {
 
@@ -102,4 +95,22 @@ public class Util {
 			e.printStackTrace();
 		}
 	}
+	
+	public static void saveCsvToFile(String lines, String fileName){
+		 
+		try{
+			File file = new File(fileName);
+			if(!file.exists()){
+				file.createNewFile();
+			}
+			
+			Files.write(file.toPath(),lines.getBytes(), StandardOpenOption.APPEND);
+			 
+		}catch(Exception e){
+			System.out.println("result is:" + lines);
+			System.out.println(e.getMessage());
+			e.printStackTrace();
+		}
+	}
+	
 }
