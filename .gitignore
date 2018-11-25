@@ -7,3 +7,5 @@
 \.settings\*
 
 target/classes/META-INF/maven/edu\.uw\.empiricalstudy/EmpiricalStudyProject/pom\.properties
+
+target/
