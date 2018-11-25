@@ -19,25 +19,25 @@ public class Application {
 	private static int[] weights;
 
 	public static void main(String[] args) {
-		testScenario1();
+		 
+		regressionTestScenarioWithDataSize(100,100);
 	}
 
 	/**
 	 * having the same date set size and running all of the algorithm with each
 	 * set.
 	 */
-	public static void testScenario1() {
+	public static void regressionTestScenarioWithDataSize(int iteration, int dataSetSize) {
 		StringBuilder sb = new StringBuilder();
-
-		int testcaseRepeatation = 10;
+ 
 		sb.append("Data Set Size,DP buttomUp Time(NanoSec), Brute Force Time(NanoSec), DP Top Down Time(NanoSec),").append(System.lineSeparator());
 
 		//regression
-		for (int i = 0; i < testcaseRepeatation; i++) {
+		for (int i = 0; i < iteration; i++) {
 
 			_W = Util.randomIntGenerator();
-			values = Util.randomIntArrayGenerator(3);
-			weights = Util.randomIntArrayGenerator(values.length);
+			values = Util.randomIntArrayGenerator(dataSetSize);
+			weights = Util.randomIntArrayGenerator(values.length);//same length
 
 			// Dp buttom up
 			long start = System.nanoTime();
