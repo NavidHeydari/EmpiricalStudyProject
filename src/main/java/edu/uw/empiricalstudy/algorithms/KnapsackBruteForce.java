@@ -6,7 +6,7 @@ public class KnapsackBruteForce {
 
 		int indexAtThisPoint = values.length - 1;
 		int finalValueSelection = calculateBruteForce(values, weights, w, indexAtThisPoint);
-		System.out.println("final result BruteForce with max Value:" + finalValueSelection);
+//		System.out.println("final result BruteForce with max Value:" + finalValueSelection);
 
 	}
 
@@ -24,32 +24,32 @@ public class KnapsackBruteForce {
 		}
 		//
 		if (weights[index] > capacity) {
-			System.out.println("weights[index] > capacity -> "+ weights[index] +" >"+ capacity);
+//			System.out.println("weights[index] > capacity -> "+ weights[index] +" >"+ capacity);
 			return calculateBruteForce(values, weights, capacity, index - 1);
 		}
 
-		// recursive parts
-		// return Math.max(values[index] +
-		// calculateBruteForce(values,weights,capacity-weights[index],index-1)
-		// , calculateBruteForce(values,weights,capacity,index-1));
+//		 recursive parts
+		 return Math.max(values[index] +
+		 calculateBruteForce(values,weights,capacity-weights[index],index-1)
+		 , calculateBruteForce(values,weights,capacity,index-1));
 
-		int notPicked = calculateBruteForce(values, weights, capacity, index - 1);
-		System.out.println("finished not picked. with index=" + index + " not picked value=" + notPicked);
-		int picked = values[index] + calculateBruteForce(values, weights, capacity - weights[index], index - 1);
-		System.out.println("finished picked. with index=" + index + " picked value=" + picked);
-
-		System.out.println(picked + "?" + notPicked);
-		if (picked >= notPicked) {
-			System.out.println("PICKED value[" + index + "]=" + values[index] + " weight[" + index + "]="
-					+ weights[index] + " | remaining Capacity=" + (capacity - weights[index])
-					+ " | value so far with picking=" + picked);
-			return picked;
-		} else {
-			System.out.println(
-					"NOT PICKED value[" + index + "]=" + values[index] + " weight[" + index + "]=" + weights[index]
-							+ " | remaining Capacity=" + (capacity) + " | value so far without picking=" + notPicked);
-			return notPicked;
-		}
+//		int notPicked = calculateBruteForce(values, weights, capacity, index - 1);
+//		System.out.println("finished not picked. with index=" + index + " not picked value=" + notPicked);
+//		int picked = values[index] + calculateBruteForce(values, weights, capacity - weights[index], index - 1);
+//		System.out.println("finished picked. with index=" + index + " picked value=" + picked);
+//
+//		System.out.println(picked + "?" + notPicked);
+//		if (picked >= notPicked) {
+//			System.out.println("PICKED value[" + index + "]=" + values[index] + " weight[" + index + "]="
+//					+ weights[index] + " | remaining Capacity=" + (capacity - weights[index])
+//					+ " | value so far with picking=" + picked);
+//			return picked;
+//		} else {
+//			System.out.println(
+//					"NOT PICKED value[" + index + "]=" + values[index] + " weight[" + index + "]=" + weights[index]
+//							+ " | remaining Capacity=" + (capacity) + " | value so far without picking=" + notPicked);
+//			return notPicked;
+//		}
 	}
 
 	// TODO clean up after testing

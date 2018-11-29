@@ -1,5 +1,7 @@
 package edu.uw.empiricalstudy;
 
+import javax.swing.JOptionPane;
+
 import edu.uw.empiricalstudy.algorithms.KnapsackBottomUpDp;
 import edu.uw.empiricalstudy.algorithms.KnapsackBruteForce;
 import edu.uw.empiricalstudy.algorithms.KnapsackTopDownDp;
@@ -19,8 +21,14 @@ public class Application {
 	private static int[] weights;
 
 	public static void main(String[] args) {
+		try {
+			int iteration = Integer.valueOf(args[0]);
+			int dataSetSize = Integer.valueOf(args[1]);
+			regressionTestScenarioWithDataSize(iteration, dataSetSize);
+		} catch (Exception e) {
+			JOptionPane.showMessageDialog(null, "Input will be translated like this \n Iteration,dataSetSize");
+		}
 
-		regressionTestScenarioWithDataSize(20, 10);
 	}
 
 	/**
