@@ -28,7 +28,7 @@ public class Application {
 			int testScenario = Integer.valueOf(args[2]);
 			switch (testScenario) {
 			case 1:
-				// variable dataset in each iteration
+				// same N differnet W
 				testRegressionAllAlgorithmsDifferentDataSetInEachIteration(iteration, dataSetSize);
 				break;
 			case 2:
@@ -36,7 +36,7 @@ public class Application {
 				testRegressionDP_SameNSameW(iteration, dataSetSize);
 				break;
 			case 3:
-				// same dataset for all iteration
+				// same N and W for all iterations.
 				testRegressionAllAlgorithmsSameDataSetInAllIteration(iteration, dataSetSize);
 				break;
 			case 4:
