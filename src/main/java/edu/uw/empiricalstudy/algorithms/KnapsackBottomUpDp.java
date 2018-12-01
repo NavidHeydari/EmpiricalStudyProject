@@ -1,7 +1,11 @@
 package edu.uw.empiricalstudy.algorithms;
 
 import edu.uw.empiricalstudy.common.Util;
-
+/**
+ * 
+ * @author Navid
+ *
+ */
 public class KnapsackBottomUpDp {
 
 	public KnapsackBottomUpDp(int[] values, int[] weights, int capacity) {
