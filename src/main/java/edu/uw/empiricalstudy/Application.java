@@ -12,7 +12,7 @@ import edu.uw.empiricalstudy.common.Util;
  * question pdf
  * 
  * @author Navid Heydari
- * @author Sri
+ * @author Srivatsan
  *
  */
 public class Application {
