@@ -1,0 +1,52 @@
+Data Set Size, Brute Force Time(NanoSec),DP buttomUp Time(NanoSec), DP Top Down Time(NanoSec)
+1,447906,3293402,600629
+1,1232,1810920,6158
+1,1232,639221,4106
+Data Set Size, Brute Force Time(NanoSec),DP buttomUp Time(NanoSec), DP Top Down Time(NanoSec)
+2,432305,2518701,573944
+2,1231,2581515,9031
+2,1232,1861827,7800
+Data Set Size, Brute Force Time(NanoSec),DP buttomUp Time(NanoSec), DP Top Down Time(NanoSec)
+3,446263,3517150,585439
+3,1642,382629,13548
+3,1643,3352931,34075
+Data Set Size, Brute Force Time(NanoSec),DP buttomUp Time(NanoSec), DP Top Down Time(NanoSec)
+5,454886,6123298,751710
+5,5337,3628408,60761
+5,5337,7373001,50497
+Data Set Size, Brute Force Time(NanoSec),DP buttomUp Time(NanoSec), DP Top Down Time(NanoSec)
+10,609661,13409673,1274747
+10,34896,1748516,258644
+10,24222,3119331,189262
+Data Set Size, Brute Force Time(NanoSec),DP buttomUp Time(NanoSec), DP Top Down Time(NanoSec)
+15,1233692,7191128,2101587
+15,121111,1845816,407672
+15,151902,13741805,310373
+Data Set Size, Brute Force Time(NanoSec),DP buttomUp Time(NanoSec), DP Top Down Time(NanoSec)
+20,6351972,10318670,2859866
+20,4665037,11867661,742678
+20,4870310,9238523,718867
+Data Set Size, Brute Force Time(NanoSec),DP buttomUp Time(NanoSec), DP Top Down Time(NanoSec)
+25,135781612,14801424,3269590
+25,102532290,13189621,1695556
+25,106493241,11692358,639221
+Data Set Size, Brute Force Time(NanoSec),DP buttomUp Time(NanoSec), DP Top Down Time(NanoSec)
+30,3714799660,20049028,3943297
+30,4683300907,24675884,1594151
+30,4667582322,5668412,917161
+Data Set Size, Brute Force Time(NanoSec),DP buttomUp Time(NanoSec), DP Top Down Time(NanoSec)
+33,33426261989,32828512,4430616
+33,27526390120,3072939,2368031
+33,27985709295,5653633,724204
+Data Set Size, Brute Force Time(NanoSec),DP buttomUp Time(NanoSec), DP Top Down Time(NanoSec)
+35,1.37E+11,29955509,4285282
+35,1.10E+11,16375049,2664856
+35,1.08E+11,9901145,1131056
+Data Set Size, Brute Force Time(NanoSec),DP buttomUp Time(NanoSec), DP Top Down Time(NanoSec)
+36,2.48E+11,12099620,5211063
+36,3.12E+11,17662522,2640223
+36,3.11E+11,16451410,1134340
+Data Set Size, Brute Force Time(NanoSec),DP buttomUp Time(NanoSec), DP Top Down Time(NanoSec)
+40,3.83E+12,10041962,4433490
+40,4.89E+12,3860367,3432167
+40,4.89E+12,9292304,1369993

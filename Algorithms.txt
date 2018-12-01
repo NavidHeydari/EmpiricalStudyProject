@@ -1,18 +1,22 @@
-package edu.uw.empiricalstudy.algorithms;
+ //index in each level
+Algorithm calculateBruteForce(int[] values, int[] weights, int capacity, int index) {
+	
+		 
+		if (capacity <= 0 || index < 0 || index == values.length) 
+			return 0;
+		end If 
 
-import edu.uw.empiricalstudy.common.Util;
-/**
- * 
- * @author Navid
- *
- */
-public class KnapsackBottomUpDp {
+		 return max(values[index] + calculateBruteForce(values,weights,capacity-weights[index],index-1)
+		 , calculateBruteForce(values,weights,capacity,index-1));
+ 
+}
 
-	public KnapsackBottomUpDp(int[] values, int[] weights, int capacity) {
 
-		//n * W = n X capacity
+Algorithm KnapsackBottomUpDp(int[] values, int[] weights, int capacity) {
+
+		//n * W = n X capacity array showing the final result;
 		int[][] selection = new int[values.length+1][capacity+1]; 
-		
+		//init the final table.
 		for(int w =  0 ; w <= capacity;w++){
 			selection[0][w] = 0; //row 0 = 0
 		}
@@ -22,35 +26,22 @@ public class KnapsackBottomUpDp {
 			selection[i][0] = 0;// all items in col 0 = 0
 		}
 		
-		//start picking
+		//start picking - iterating through
 		for(int i = 1 ; i <= n ; i++){
-			for(int w =  1 ; w <= capacity;w++){
+			for(int w =  1 ; w <= capacity;w++){//iterating based on weights inside the selections 
 				//can we go forward based on the remaining weights
 				if(weights[i-1] <= w){
 					//compare and see if it needs to pick it or not.
 					if( values[i-1] + selection[i-1][w-weights[i-1]] >= selection[i-1][w]){
 						//picked that since we still have place inside the knapsack
 						selection[i][w] = values[i-1] + selection[i-1][w-weights[i-1]];
-					}else{
+					end if else
 						selection[i][w] = selection[i-1][w]; //didn't pick that
-					}
-				}
+					end else
+				end if
 			}
 		}
-		//TODO cleanup after finish testing
-//		Util.printPrettyArray(selection);
-//		System.out.println(selection[n][capacity]);
-		
-	}
-
-//	public static void main(String[] args) {
-//
-//		int values[] = new int[] { 60, 100, 120 };
-//		int weights[] = new int[] { 10, 20, 30 };
-//		int capacity = 50; 
-//		
-//		new KnapsackBottomUpDp(values, weights, capacity);
-//
-//	}
-
+	print selection
 }
+
+

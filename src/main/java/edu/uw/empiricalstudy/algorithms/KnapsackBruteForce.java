@@ -1,5 +1,9 @@
 package edu.uw.empiricalstudy.algorithms;
-
+/**
+ * 
+ * @author Navid
+ *
+ */
 public class KnapsackBruteForce {
 
 	public KnapsackBruteForce(int[] values, int[] weights, int w) {
