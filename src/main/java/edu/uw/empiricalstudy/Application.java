@@ -61,7 +61,7 @@ public class Application {
 			start = System.nanoTime();
 			new KnapsackBottomUpDp(values, weights, _W);
 			finish = System.nanoTime();
-			System.out.println("dy buttom up finished");
+			System.out.println("dp buttom up finished");
 
 			sb.append((finish - start)).append(",");
 
@@ -69,7 +69,7 @@ public class Application {
 			start = System.nanoTime();
 			new KnapsackTopDownDp(values, weights, _W);
 			finish = System.nanoTime();
-			System.out.println("dy top down finished");
+			System.out.println("dp top down finished");
 			sb.append((finish - start)).append(",").append(System.lineSeparator());
 
 		}
